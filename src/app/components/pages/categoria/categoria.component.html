@@ -1,0 +1,773 @@
+
+    <!-- Room Details Section Begin -->
+    <section *ngIf="random | async as r" class="room-details-section spad">
+
+      <div  id="wrapper">
+
+        <!-- content -->
+        <div class="page-content">
+
+
+            <div class="container">
+
+
+
+                <div uk-grid="">
+                    <div class="uk-width-3-4@m">
+
+                        <div class="blog-post single-post">
+
+                            <!-- Blog Post Thumbnail -->
+                            <div class="blog-post-thumbnail">
+                                <div class="blog-post-thumbnail-inner">
+                                    <span class="blog-item-tag">Tips</span>
+                                    <img src="{{r.imagePost}}" alt="">
+                                </div>
+                            </div>
+
+
+                            <!-- Blog Post Content -->
+                            <div class="blog-post-content">
+
+                                <h3> {{r.titlePost}} </h3>
+                                <div class="mb-2">
+                                    <a href="#" class="blog-post-info">22 July 2018</a>
+                                    <a href="#" class="blog-post-info">5 Comments</a>
+                                </div>
+
+                                <p>{{r.p2}}</p>
+
+
+                                <h4>{{r.np}} </h4>
+
+                                <p>{{r.p3}}</p>
+
+                                <h4>Interdum et malesuada fames ipsum</h4>
+                                <ul class="uk-list uk-list-bullet mb-5">
+                                    <li>At vero eos et accusam et justo</li>
+                                    <li>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt</li>
+                                    <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</li>
+                                </ul>
+
+                                <p>{{r.p4}} </p>
+
+
+                            </div>
+
+                        </div>
+
+                        <h4>Author </h4>
+
+                        <div class="uk-card-default rounded px-3 pb-md-3" uk-toggle="cls: uk-flex uk-flex-between@m uk-flex-middle; mode: media; media: @m">
+                            <div class="user-details-card">
+                                <div class="user-details-card-avatar">
+                                    <img src="..\assets\images\avatars\avatar-2.jpeg" alt="">
+                                </div>
+                                <div class="user-details-card-name">
+                                    Stella Johnson <span> Developer <span> 1 year ago </span> </span>
+                                </div>
+                            </div>
+                            <div>
+                                <strong class="mx-3 uk-visible@s"> Share on </strong>
+
+                                <a href="#" class="btn btn-facebook  rounded-circle btn-icon-only transition-3d-hover">
+                                    <span class="btn-inner--icon">
+                                        <i class="icon-brand-facebook-f"></i>
+                                    </span>
+                                </a>
+
+                                <a href="#" class="btn btn-twitter rounded-circle btn-icon-only transition-3d-hover">
+                                    <span class="btn-inner--icon">
+                                        <i class="icon-brand-twitter"></i>
+                                    </span>
+                                </a>
+
+                                <a href="#" class="btn btn-google-plus rounded-circle btn-icon-only transition-3d-hover">
+                                    <span class="btn-inner--icon">
+                                        <i class="icon-brand-google-plus-g"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- comments -->
+
+                        <div class="comments">
+                            <h4>Comments
+                                <span class="comments-amount">5210</span>
+                            </h4>
+
+                            <ul>
+                                <li>
+                                    <div class="comments-avatar"><img src="..\assets\images\avatars\avatar-1.jpeg" alt="">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-by">Jonathan Madano <span>Student</span>
+                                            <a href="#" class="reply"><i class="icon-line-awesome-undo"></i> Reply</a>
+                                        </div>
+                                        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                            nibh
+                                            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                                            enim ad
+                                            minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                                            ut
+                                            aliquip ex ea commodo consequat. Nam liber tempor cum soluta nobis eleifend
+                                            option
+                                            congue </p>
+                                    </div>
+
+                                    <ul>
+                                        <li>
+                                            <div class="comments-avatar"><img src="..\assets\images\avatars\avatar-2.jpeg" alt="">
+                                            </div>
+                                            <div class="comment-content">
+                                                <div class="comment-by">Stella Johnson<span>Student</span>
+                                                    <a href="#" class="reply"><i class="icon-line-awesome-undo"></i>
+                                                        Reply</a>
+                                                </div>
+                                                <p> Nam liber tempor cum soluta nobis eleifend option congue ut laoreet
+                                                    dolore
+                                                    magna aliquam erat volutpat nihil imperdiet doming id quod mazim
+                                                    placerat
+                                                    facer possim assum. Lorem ipsum dolor sit amet</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="comments-avatar">
+                                                <img src="..\assets\images\avatars\avatar-3.jpeg" alt=""></div>
+                                            <div class="comment-content">
+
+                                                <div class="comment-by">Adrian Mohani <span>Student</span>
+                                                    <a href="#" class="reply"><i class="icon-line-awesome-undo"></i>
+                                                        Reply</a>
+                                                </div>
+                                                <p>tempor cum soluta nobis eleifend option congue ut laoreet dolore
+                                                    magna
+                                                    aliquam erat volutpat.</p>
+                                            </div>
+
+                                        </li>
+                                    </ul>
+
+                                </li>
+
+                                <li>
+                                    <div class="comments-avatar"><img src="..\assets\images\avatars\avatar-4.jpeg" alt="">
+                                    </div>
+                                    <div class="comment-content">
+
+                                        <div class="comment-by">Alex Dolgove<span>Student</span>
+                                            <a href="#" class="reply"><i class="icon-line-awesome-undo"></i> Reply</a>
+                                        </div>
+                                        <p>Nam liber tempor cum soluta nobis eleifend option congue ut laoreet dolore
+                                            magna
+                                            aliquam erat volutpat nihil imperdiet doming id quod mazim placerat facer
+                                            possim
+                                            assum. Lorem ipsum dolor sit amet</p>
+                                    </div>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <!-- Add comments -->
+
+                        <div class="comments">
+                            <h4>Your Comment </h4>
+                            <ul>
+                                <li>
+                                    <div class="comments-avatar"><img src="..\assets\images\avatars\avatar-2.jpeg" alt="">
+                                    </div>
+                                    <div class="comment-content">
+                                        <form class="uk-grid-small" uk-grid="">
+                                            <div class="uk-width-1-2@s">
+                                                <label class="uk-form-label">Name</label>
+                                                <input class="uk-input" type="text" placeholder="Name">
+                                            </div>
+                                            <div class="uk-width-1-2@s">
+                                                <label class="uk-form-label">Email</label>
+                                                <input class="uk-input" type="text" placeholder="Email">
+                                            </div>
+                                            <div class="uk-width-1-1@s">
+                                                <label class="uk-form-label">Comment</label>
+                                                <textarea class="uk-textarea" placeholder="Enter Your Comments her..." style=" height:160px"></textarea>
+                                            </div>
+                                            <div class="uk-grid-margin">
+                                                <input type="submit" value="submit" class="btn btn-default">
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="uk-width-1-4@m">
+
+                        <h4> Related Articles</h4>
+                        <a href="#">
+                            <div class="uk-card-default mb-4 rounded animate-this uk-inline-clip">
+                                <img src="..\assets\images\blog\img-1.jpeg" alt="">
+                                <div class="p-3">
+                                    <p class="mb-2"> 10 amazing web demos and experiments </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div class="uk-card-default mb-4 rounded animate-this uk-inline-clip">
+                                <img src="..\assets\images\blog\img-2.jpeg" alt="">
+                                <div class="p-3">
+                                    <p class="mb-2"> Learn 10 Awesome Web Dev Tools And Resources </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div class="uk-card-default mb-4 rounded animate-this uk-inline-clip">
+                                <img src="..\assets\images\blog\img-3.jpeg" alt="">
+                                <div class="p-3">
+                                    <p class="mb-2">10 Interesting JavaScript And CSS Libraries </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div class="uk-card-default mb-4 rounded animate-this uk-inline-clip">
+                                <img src="..\assets\images\blog\img-4.jpeg" alt="">
+                                <div class="p-3">
+                                    <p class="mb-2"> Learn New 10 Interesting JavaScript And CSS Libraries </p>
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+                <!-- footer
+               ================================================== -->
+                <div class="footer">
+                    <div class="uk-grid-collapse" uk-grid="">
+                        <div class="uk-width-expand@s uk-first-column">
+                            <p>© 2019 <strong>Courseplus</strong>. All Rights Reserved. </p>
+                        </div>
+                        <div class="uk-width-auto@s">
+                            <nav class="footer-nav-icon">
+                                <ul>
+                                    <li><a href="#"><i class="icon-brand-facebook"></i></a></li>
+                                    <li><a href="#"><i class="icon-brand-dribbble"></i></a></li>
+                                    <li><a href="#"><i class="icon-brand-youtube"></i></a></li>
+                                    <li><a href="#"><i class="icon-brand-twitter"></i></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </section>
+    <!-- Room Details Section End -->
+
+    <!-- Room Details Section Begin -->
+    <section *ngIf="meme | async as m" class="room-details-section spad">
+
+      <div  id="wrapper">
+
+        <!-- content -->
+        <div class="page-content">
+
+
+            <div class="container">
+
+
+
+                <div uk-grid="">
+                    <div class="uk-width-3-4@m">
+
+                        <div class="blog-post single-post">
+
+                            <!-- Blog Post Thumbnail -->
+                            <div class="blog-post-thumbnail">
+                                <div class="blog-post-thumbnail-inner">
+                                    <span class="blog-item-tag">Tips</span>
+                                    <img src="{{m.imagePost}}" alt="">
+                                </div>
+                            </div>
+
+
+                            <!-- Blog Post Content -->
+                            <div class="blog-post-content">
+
+                                <h3> {{m.titlePost}} </h3>
+                                <div class="mb-2">
+                                    <a href="#" class="blog-post-info">22 July 2018</a>
+                                    <a href="#" class="blog-post-info">5 Comments</a>
+                                </div>
+
+                                <p>{{m.titlePost}}</p>
+
+
+                                <h4>{{m.tagsPost}} </h4>
+
+                                <p>{{m.createdDate}}</p>
+
+                                <h4>Interdum et malesuada fames ipsum</h4>
+                                <ul class="uk-list uk-list-bullet mb-5">
+                                    <li>At vero eos et accusam et justo</li>
+                                    <li>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt</li>
+                                    <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</li>
+                                </ul>
+
+                                <p>{{m.contentPost}} </p>
+
+
+                            </div>
+
+                        </div>
+
+                        <h4>Author </h4>
+
+                        <div class="uk-card-default rounded px-3 pb-md-3" uk-toggle="cls: uk-flex uk-flex-between@m uk-flex-middle; mode: media; media: @m">
+                            <div class="user-details-card">
+                                <div class="user-details-card-avatar">
+                                    <img src="..\assets\images\avatars\avatar-2.jpeg" alt="">
+                                </div>
+                                <div class="user-details-card-name">
+                                    Stella Johnson <span> Developer <span> 1 year ago </span> </span>
+                                </div>
+                            </div>
+                            <div>
+                                <strong class="mx-3 uk-visible@s"> Share on </strong>
+
+                                <a href="#" class="btn btn-facebook  rounded-circle btn-icon-only transition-3d-hover">
+                                    <span class="btn-inner--icon">
+                                        <i class="icon-brand-facebook-f"></i>
+                                    </span>
+                                </a>
+
+                                <a href="#" class="btn btn-twitter rounded-circle btn-icon-only transition-3d-hover">
+                                    <span class="btn-inner--icon">
+                                        <i class="icon-brand-twitter"></i>
+                                    </span>
+                                </a>
+
+                                <a href="#" class="btn btn-google-plus rounded-circle btn-icon-only transition-3d-hover">
+                                    <span class="btn-inner--icon">
+                                        <i class="icon-brand-google-plus-g"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- comments -->
+
+                        <div class="comments">
+                            <h4>Comments
+                                <span class="comments-amount">5210</span>
+                            </h4>
+
+                            <ul>
+                                <li>
+                                    <div class="comments-avatar"><img src="..\assets\images\avatars\avatar-1.jpeg" alt="">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-by">Jonathan Madano <span>Student</span>
+                                            <a href="#" class="reply"><i class="icon-line-awesome-undo"></i> Reply</a>
+                                        </div>
+                                        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                            nibh
+                                            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                                            enim ad
+                                            minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                                            ut
+                                            aliquip ex ea commodo consequat. Nam liber tempor cum soluta nobis eleifend
+                                            option
+                                            congue </p>
+                                    </div>
+
+                                    <ul>
+                                        <li>
+                                            <div class="comments-avatar"><img src="..\assets\images\avatars\avatar-2.jpeg" alt="">
+                                            </div>
+                                            <div class="comment-content">
+                                                <div class="comment-by">Stella Johnson<span>Student</span>
+                                                    <a href="#" class="reply"><i class="icon-line-awesome-undo"></i>
+                                                        Reply</a>
+                                                </div>
+                                                <p> Nam liber tempor cum soluta nobis eleifend option congue ut laoreet
+                                                    dolore
+                                                    magna aliquam erat volutpat nihil imperdiet doming id quod mazim
+                                                    placerat
+                                                    facer possim assum. Lorem ipsum dolor sit amet</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="comments-avatar">
+                                                <img src="..\assets\images\avatars\avatar-3.jpeg" alt=""></div>
+                                            <div class="comment-content">
+
+                                                <div class="comment-by">Adrian Mohani <span>Student</span>
+                                                    <a href="#" class="reply"><i class="icon-line-awesome-undo"></i>
+                                                        Reply</a>
+                                                </div>
+                                                <p>tempor cum soluta nobis eleifend option congue ut laoreet dolore
+                                                    magna
+                                                    aliquam erat volutpat.</p>
+                                            </div>
+
+                                        </li>
+                                    </ul>
+
+                                </li>
+
+                                <li>
+                                    <div class="comments-avatar"><img src="..\assets\images\avatars\avatar-4.jpeg" alt="">
+                                    </div>
+                                    <div class="comment-content">
+
+                                        <div class="comment-by">Alex Dolgove<span>Student</span>
+                                            <a href="#" class="reply"><i class="icon-line-awesome-undo"></i> Reply</a>
+                                        </div>
+                                        <p>Nam liber tempor cum soluta nobis eleifend option congue ut laoreet dolore
+                                            magna
+                                            aliquam erat volutpat nihil imperdiet doming id quod mazim placerat facer
+                                            possim
+                                            assum. Lorem ipsum dolor sit amet</p>
+                                    </div>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <!-- Add comments -->
+
+                        <div class="comments">
+                            <h4>Your Comment </h4>
+                            <ul>
+                                <li>
+                                    <div class="comments-avatar"><img src="..\assets\images\avatars\avatar-2.jpeg" alt="">
+                                    </div>
+                                    <div class="comment-content">
+                                        <form class="uk-grid-small" uk-grid="">
+                                            <div class="uk-width-1-2@s">
+                                                <label class="uk-form-label">Name</label>
+                                                <input class="uk-input" type="text" placeholder="Name">
+                                            </div>
+                                            <div class="uk-width-1-2@s">
+                                                <label class="uk-form-label">Email</label>
+                                                <input class="uk-input" type="text" placeholder="Email">
+                                            </div>
+                                            <div class="uk-width-1-1@s">
+                                                <label class="uk-form-label">Comment</label>
+                                                <textarea class="uk-textarea" placeholder="Enter Your Comments her..." style=" height:160px"></textarea>
+                                            </div>
+                                            <div class="uk-grid-margin">
+                                                <input type="submit" value="submit" class="btn btn-default">
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="uk-width-1-4@m">
+
+                        <h4> Related Articles</h4>
+                        <a href="#">
+                            <div class="uk-card-default mb-4 rounded animate-this uk-inline-clip">
+                                <img src="..\assets\images\blog\img-1.jpeg" alt="">
+                                <div class="p-3">
+                                    <p class="mb-2"> 10 amazing web demos and experiments </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div class="uk-card-default mb-4 rounded animate-this uk-inline-clip">
+                                <img src="..\assets\images\blog\img-2.jpeg" alt="">
+                                <div class="p-3">
+                                    <p class="mb-2"> Learn 10 Awesome Web Dev Tools And Resources </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div class="uk-card-default mb-4 rounded animate-this uk-inline-clip">
+                                <img src="..\assets\images\blog\img-3.jpeg" alt="">
+                                <div class="p-3">
+                                    <p class="mb-2">10 Interesting JavaScript And CSS Libraries </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div class="uk-card-default mb-4 rounded animate-this uk-inline-clip">
+                                <img src="..\assets\images\blog\img-4.jpeg" alt="">
+                                <div class="p-3">
+                                    <p class="mb-2"> Learn New 10 Interesting JavaScript And CSS Libraries </p>
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+                <!-- footer
+               ================================================== -->
+                <div class="footer">
+                    <div class="uk-grid-collapse" uk-grid="">
+                        <div class="uk-width-expand@s uk-first-column">
+                            <p>© 2019 <strong>Courseplus</strong>. All Rights Reserved. </p>
+                        </div>
+                        <div class="uk-width-auto@s">
+                            <nav class="footer-nav-icon">
+                                <ul>
+                                    <li><a href="#"><i class="icon-brand-facebook"></i></a></li>
+                                    <li><a href="#"><i class="icon-brand-dribbble"></i></a></li>
+                                    <li><a href="#"><i class="icon-brand-youtube"></i></a></li>
+                                    <li><a href="#"><i class="icon-brand-twitter"></i></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </section>
+    <!-- Room Details Section End -->
+
+        <!-- Room Details Section Begin -->
+    <section *ngIf="anime | async as m" class="room-details-section spad">
+
+      <div  id="wrapper">
+
+        <!-- content -->
+        <div class="page-content">
+
+
+            <div class="container">
+
+
+
+                <div uk-grid="">
+                    <div class="uk-width-3-4@m">
+
+                        <div class="blog-post single-post">
+
+                            <!-- Blog Post Thumbnail -->
+                            <div class="blog-post-thumbnail">
+                                <div class="blog-post-thumbnail-inner">
+                                    <span class="blog-item-tag">{{m.tagsPost}}</span>
+                                    <img src="{{m.imagePost}}" alt="">
+                                </div>
+                            </div>
+
+
+                            <!-- Blog Post Content -->
+                            <div class="blog-post-content">
+
+                                <h3> {{m.titlePost}} </h3>
+                                <!-- <div class="mb-2">
+                                    <a href="#" class="blog-post-info">22 July 2018</a>
+                                    <a href="#" class="blog-post-info">5 Comments</a>
+                                </div> -->
+
+                                <!-- <p>{{m.titlePost}}</p> -->
+
+
+                                <!-- <h4>{{m.tagsPost}} </h4> -->
+
+                                <p>{{m.createdDate * 1000 | date:'shortTime'}}</p>
+
+                                <p></p>
+
+                                <!-- <h4>Interdum et malesuada fames ipsum</h4>
+                                <ul class="uk-list uk-list-bullet mb-5">
+                                    <li>At vero eos et accusam et justo</li>
+                                    <li>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt</li>
+                                    <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</li>
+                                </ul> -->
+
+                                <p>{{m.contentPost}} </p>
+
+
+                            </div>
+
+                            <!-- <div class="comments">
+
+                            </div> -->
+
+
+                        </div>
+
+                        <!-- <h4>Author </h4>
+
+                        <div class="uk-card-default rounded px-3 pb-md-3" uk-toggle="cls: uk-flex uk-flex-between@m uk-flex-middle; mode: media; media: @m">
+                            <div class="user-details-card">
+                                <div class="user-details-card-avatar">
+                                    <img src="..\assets\images\avatars\avatar-2.jpeg" alt="">
+                                </div>
+                                <div class="user-details-card-name">
+                                    Stella Johnson <span> Developer <span> 1 year ago </span> </span>
+                                </div>
+                            </div>
+                            <div>
+                                <strong class="mx-3 uk-visible@s"> Share on </strong>
+
+                                <a href="#" class="btn btn-facebook  rounded-circle btn-icon-only transition-3d-hover">
+                                    <span class="btn-inner--icon">
+                                        <i class="icon-brand-facebook-f"></i>
+                                    </span>
+                                </a>
+
+                                <a href="#" class="btn btn-twitter rounded-circle btn-icon-only transition-3d-hover">
+                                    <span class="btn-inner--icon">
+                                        <i class="icon-brand-twitter"></i>
+                                    </span>
+                                </a>
+
+                                <a href="#" class="btn btn-google-plus rounded-circle btn-icon-only transition-3d-hover">
+                                    <span class="btn-inner--icon">
+                                        <i class="icon-brand-google-plus-g"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div> -->
+
+                        <!-- comments -->
+
+                        <!-- <div class="comments">
+
+
+                        </div> -->
+
+
+                    </div>
+
+                    <div class="uk-width-1-4@m">
+
+                        <h4> Related Articles</h4>
+                        <a href="#">
+                            <div class="uk-card-default mb-4 rounded animate-this uk-inline-clip">
+                                <img src="..\assets\images\blog\img-1.jpeg" alt="">
+                                <div class="p-3">
+                                    <p class="mb-2"> 10 amazing web demos and experiments </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div class="uk-card-default mb-4 rounded animate-this uk-inline-clip">
+                                <img src="..\assets\images\blog\img-2.jpeg" alt="">
+                                <div class="p-3">
+                                    <p class="mb-2"> Learn 10 Awesome Web Dev Tools And Resources </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- <a href="#">
+                            <div class="uk-card-default mb-4 rounded animate-this uk-inline-clip">
+                                <img src="..\assets\images\blog\img-3.jpeg" alt="">
+                                <div class="p-3">
+                                    <p class="mb-2">10 Interesting JavaScript And CSS Libraries </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div class="uk-card-default mb-4 rounded animate-this uk-inline-clip">
+                                <img src="..\assets\images\blog\img-4.jpeg" alt="">
+                                <div class="p-3">
+                                    <p class="mb-2"> Learn New 10 Interesting JavaScript And CSS Libraries </p>
+                                </div>
+                            </div>
+                        </a> -->
+
+
+                    </div>
+
+                </div>
+
+
+<!--
+                <div class="comments">
+
+
+              </div> -->
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </section>
+    <!-- Room Details Section End -->
+
+    <article class="container">
+
+
+
+    <div class="page-content">
+      <div class="comments ">
+        <!-- <h4>Comments
+          <span class="comments-amount">5210</span>
+      </h4> -->
+
+
+      <div class="page-content">
+        <div class="comments ">
+          <h4>CAJA DE COMENTARIOS GENERAL <span class="comments-amount"> :D </span> </h4>
+
+          <div id="disqus_thread"></div>
+          <script>
+
+              (function() { // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+              s.src = 'https://publicamiwea.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </div>
+      </div>
+    </div>
+    </article>

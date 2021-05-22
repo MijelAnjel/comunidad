@@ -1,0 +1,83 @@
+<article>
+  <div uk-height-viewport="expand: true" class="uk-flex uk-flex-middle my-5 py-5">
+    <div class="uk-width-1-3@m uk-width-1-2@s m-auto">
+        <div class="uk-card-default p-5 rounded">
+            <div class="mb-4 uk-text-center">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                <h3 class="mb-0"> PUBLICA ;)</h3>
+                <p class="my-2">ESCOGE TU COMUNIDAD FAVORITA Y COMPARTE</p>
+            </div>
+            <form [formGroup]="newPostForm" (ngSubmit)="addNewPost(newPostForm.value)">
+
+                <div class="uk-form-group">
+                    <label class="uk-form-label"> TITULO</label>
+
+                    <div class="uk-position-relative w-100">
+                        <span class="uk-form-icon">
+                            <i class="icon-material-outline-add"></i>
+                        </span>
+                        <input formControlName="titlePost" class="uk-input" type="text" placeholder="Título de publicación">
+                    </div>
+
+                </div>
+
+                <div class="uk-form-group">
+                    <label class="uk-form-label"> CONTENIDO</label>
+
+                    <div class="uk-position-relative w-100">
+                        <span class="uk-form-icon">
+                            <i class="icon-material-outline-assignment"></i>
+                        </span>
+                        <textarea formControlName="contentPost" class="uk-input" type="text" placeholder="Máximo 300 carácteres ;)">
+                        </textarea>
+                    </div>
+
+                </div>
+
+                <div class="uk-form-group">
+                  <label class="uk-form-label"> ARCHIVO</label>
+
+                  <div class="uk-position-relative w-100">
+                      <span class="uk-form-icon">
+                          <!-- <i class="icon-material-outline-attach-file"></i> -->
+                      </span>
+                      <input  type="file" formControlName="imagePost" (change)="handleImage($event)" class="uk-input">
+                      <i class="icon-material-outline-attach-file"></i><span>CHOOSE IMAGE</span>
+                  </div>
+
+              </div>
+
+                <div class="uk-form-group">
+                    <label class="uk-form-label"> ¿EN QUÉ COMUNIDAD QUIERES PUBLICAR?</label>
+
+                    <div class="uk-position-relative w-100">
+                        <span class="uk-form-icon mr-2 pr-4">
+                            <i class="text-danger" class="icon-material-outline-favorite"></i>
+                        </span>
+                        <select formControlName="tagsPost" placeholder="Tags"  class="form-control">
+                          <option class="hidden ml-5 pl-4"  selected disabled>Selecciona tu comunidad</option>
+                          <option class="ml-5 pl-4">Random</option>
+                          <option class="ml-5 pl-4">Memes</option>
+                          <option class="ml-5 pl-4">Frontera</option>
+                      </select>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-4 uk-flex-middle uk-grid-small" uk-grid="">
+                    <div class="uk-width-expand@s">
+                        <p> ¿No ves una comunidad que te interese? <br> <a class="text-primary" href="page-register.html">¡Solicita Crear Una! ;D</a></p>
+                    </div>
+                    <div class="uk-width-auto@s">
+                        <button type="submit" class="btn btn-default" [disabled]="newPostForm.invalid">Publicar</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+ </article>

@@ -1,0 +1,187 @@
+<section class="container mt-5">
+  <h5>PORTADA:</h5>
+
+  <!-- <form (ngSubmit)="addProduct()">
+    <button type="submit" class="btn btn-primary">Crear Nueva Propiedad</button>
+  </form> -->
+
+</section>
+
+
+
+<section class="my-5 container">
+  <div class="row">
+    <h2 class="h2 h2-responsive col-12">Edita la Imagen y Texto de Portada</h2>
+
+      <div *ngFor="let e of posts$ |async" class="z-depth-1 p-2 mb-5 col-sm-12">
+
+        <div class="">
+          <label><li><h5>Titulo:</h5> {{e.p1}}</li></label><br>
+          <label><li><h5>Subtitulo:</h5> {{e.np}}</li></label> <br>
+          <label><li><h5>Identificación (ID):</h5> {{e.id}}</li></label>
+          <img src="{{e.img}}" class="img-fluid" alt="">
+        </div>
+        <div class="row">
+          <button class="ml-2 mr-5" (click)="deleteProduct($event, e)"
+          class="btn btn-danger"><i>delete</i> Borrar</button>
+
+          <button (click)="editProduct($event, e)"
+          class="btn btn-secondary">
+          <i class="align-items-center justify-content-center align-content-center">assignment</i>
+            Editar
+          </button>
+        </div>
+
+
+          <div class="col-12" *ngIf="editing && editingProduct.id == e.id">
+            <form [formGroup]="todoForm" (ngSubmit)="saveTodo()" class="z-depth-1">
+
+              <h2>EDITAR PORTADA:</h2>
+
+              <div class="form-row">
+
+                  <div class="form-group col-md-3">
+                    <label class="text-primary" for="inputCity">titulo:</label>
+                    <input formControlName="p1" name="p1"  type="text" class="form-control">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class="text-primary" for="inputCity">subtitulo</label>
+                    <input formControlName="np" name="np"  type="text" class="form-control">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class="text-primary" for="inputCity">Imagen de Portada</label>
+                    <input name="img" formControlName="np"  type="text" class="form-control">
+                  </div>
+
+                  <!-- <div class="form-group col-md-3">
+                    <label class="text-primary" for="inputZip">Valor/Precio:</label>
+                    <input name="valor" [(ngModel)]="editingProduct.valor"  type="text" class="form-control">
+                  </div> -->
+                </div>
+
+              <!--DESCRIPCIONES-->
+              <!-- <div class="form-group">
+                <label class="text-primary" for="inputAddress">Descripción Breve (Descripción previa en la carta antes de visitar la propiedad):</label>
+                <input name="descripcion" [(ngModel)]="editingProduct.descripcion" type="text" class="form-control" placeholder="Esta descripción es de la vista previa, antes que el visitante vea mayores detalles.">
+              </div>
+              <div class="form-group">
+                <label class="text-primary" for="inputAddress2">Descripción 1</label>
+                <input name="descripcion1" [(ngModel)]="editingProduct.descripcion1" type="text" class="form-control" placeholder="Descripción interna, cuando el visitante está revisando los detalles.">
+              </div>
+              <div class="form-group">
+                <label class="text-primary" for="inputAddress2">Descripción 2</label>
+                <input name="descripcion2" [(ngModel)]="editingProduct.descripcion2" type="text" class="form-control" placeholder="Descripción interna 2, cuando el visitante está revisando los detalles.">
+              </div>
+              <div class="form-group">
+                  <label class="text-primary" for="inputAddress2">Descripción 3</label>
+                  <input name="descripcion3" [(ngModel)]="editingProduct.descripcion3" type="text" class="form-control" placeholder="Descripción interna 3, cuando el visitante está revisando los detalles.">
+              </div> -->
+
+
+              <!-- <div class="form-row">
+                  <div class="form-group col-md-3">
+                    <label class="text-primary" for="inputCity">¿Arriendo o Venta?:</label>
+                    <input name="arriendo" [(ngModel)]="editingProduct.arriendo" type="text" class="form-control">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class="text-primary" for="inputCity">Tipologia:</label>
+                    <input name="tipologia" [(ngModel)]="editingProduct.tipologia" type="text" class="form-control">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class="text-primary" for="inputCity">Tipo de Inmueble: </label>
+                    <input name="tipoinmueble" [(ngModel)]="editingProduct.tipoinmueble" type="text" class="form-control">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class="text-primary" for="inputZip">Metros Cuadrados (Sólo colocar número) :</label>
+                    <input name="mtr" [(ngModel)]="editingProduct.mtr" type="text" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-3">
+                    <label class="text-primary" for="inputCity">¿Para cuántas personas es la vivienda?:</label>
+                    <input name="personas" [(ngModel)]="editingProduct.personas" type="text" class="form-control" placeholder="Máx 4-5 personas">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class="text-primary" for="inputCity">Habitaciones:</label>
+                    <input name="dormitorios" [(ngModel)]="editingProduct.dormitorios" type="text" class="form-control">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class="text-primary" for="inputCity">Número de Piso o Casa: </label>
+                    <input name="piso" [(ngModel)]="editingProduct.piso" type="text" class="form-control">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class="text-primary"  for="inputZip">Bodega:</label>
+                    <input name="bodega" [(ngModel)]="editingProduct.bodega" type="text" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label class="text-primary" for="inputCity">Imagen Principal (Cuadro Previo):</label>
+                    <input name="img" [(ngModel)]="editingProduct.img" type="text" class="form-control" placeholder="Pegar URL de la imagen aquí">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class="text-primary" for="inputCity">Imagen 2:</label>
+                    <input name="img1" [(ngModel)]="editingProduct.img1" type="text" class="form-control" placeholder="Pegar URL de la imagen aquí">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class="text-primary" for="inputCity">Imagen 3 </label>
+                    <input name="img2" [(ngModel)]="editingProduct.img2" type="text" class="form-control" placeholder="Pegar URL de la imagen aquí">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class="text-primary"  for="inputZip">Imagen 4 :</label>
+                    <input name="img3" [(ngModel)]="editingProduct.img3" type="text" class="form-control" placeholder="Pegar URL de la imagen aquí">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class="text-primary"  for="inputZip">Imagen 5 :</label>
+                    <input name="img4" [(ngModel)]="editingProduct.img4" type="text" class="form-control" placeholder="Pegar URL de la imagen aquí">
+                  </div>
+                </div> -->
+
+              <button type="submit">Actualizar datos</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+</section>
+
+
+<section class="container">
+  <div class="z-depth-1">
+  <div class="modal-header">
+    <h4 class="modal-title">{{createMode ? 'Create Todo' : 'Edit Todo'}}</h4>
+    <button type="button" class="close" aria-label="Close" >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="todoForm" (ngSubmit)="saveTodo()">
+      <div class="form-group">
+        <label for="p1">Title*</label>
+        <input type="text" id="p1" placeholder="p1" class="form-control" formControlName="p1" />
+        <span style="color:Red;" *ngIf="todoForm.controls['p1'].touched && todoForm.controls['p1'].errors?.required">Title
+          is required.</span>
+      </div>
+      <div class="form-group">
+        <label for="np">Description*</label>
+        <textarea  id="np" placeholder="np" class="form-control" formControlName="np"></textarea>
+        <span style="color:Red;" *ngIf="todoForm.controls['np'].touched && todoForm.controls['np'].errors?.required">Description
+          is required.</span>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="done" formControlName="done">
+        <label class="form-check-label" for="done">
+          Done
+        </label>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" >Close</button>
+    <button class="btn btn-primary" (click)="saveTodo()" [disabled]="todoForm.invalid">Save</button>
+  </div>
+</div>
+</section>

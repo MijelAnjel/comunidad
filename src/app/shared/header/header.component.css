@@ -1,0 +1,9 @@
+.onlymobile{
+  display: none;
+}
+
+@media (max-width: 1220px) {
+  .onlymobile {
+    display: block;
+  }
+}

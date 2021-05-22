@@ -1,0 +1,10 @@
+.marg{
+  margin-left: 195px;
+  margin-right: 50px;
+}
+
+@media (max-width: 1220px) {
+  .marg {
+    margin: auto;
+  }
+}

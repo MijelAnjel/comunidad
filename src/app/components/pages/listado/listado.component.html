@@ -1,0 +1,68 @@
+<article>
+
+
+<section class="container my-5 pt-5">
+
+
+  <div class="mat-elevation-z8">
+
+    <div class="col-12 card">
+
+      <!-- <h5 class="text-primary">BUSCADOR...</h5> -->
+      <mat-form-field appearance="legacy">
+        <input (keyup)="applyFilter($event.target.value)" matInput placeholder="Busca por Nombre o Tags">
+      </mat-form-field>
+
+    <!-- <b>BUSCADOR...</b><br>
+    <mat-form-field class="card">
+      <input matInput class="col-12 my-2 py-2" (keyup)="applyFilter($event.target.value)" placeholder="Busca por nombre, apellido, código SAP o cargo.">
+    </mat-form-field> -->
+  </div>
+
+    <!-- <button (click)="filtro()" class="btn btn-danger btn-sm">CLICK</button> -->
+    <table  mat-table [dataSource]="dataSource" class="mat-elevation-z8 col-12" matSort>
+      <!-- Name Column -->
+      <ng-container matColumnDef="img1">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td class="text-primary" mat-cell *matCellDef="let element">
+          <!-- {{element.img1}} -->
+           <img [routerLink]="['/ofertas', element.id]"   class="imgtable float-left avatar" [src]="element.img1"/>
+        </td>
+      </ng-container>
+      <br>
+      <ng-container matColumnDef="p1">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> NOMBRE CATEGORÍA </th>
+        <td mat-cell *matCellDef="let element" ><small>{{element.p1}}</small></td>
+      </ng-container>
+      <br>
+      <!-- Name Column -->
+      <!-- <ng-container matColumnDef="np">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> DESCRIPCIÓN </th>
+        <td mat-cell *matCellDef="let element" ><p class="p-2">{{element.np}}</p></td> <br>
+      </ng-container>
+      <br> -->
+
+        <!-- Position Column-->
+      <!-- <ng-container matColumnDef="categoria">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> FUNCIÓN </th>
+        <td mat-cell *matCellDef="let element"><small>{{element.categoria}}</small></td>
+      </ng-container> -->
+
+      <!-- <ng-container matColumnDef="descri" matColumnDef="descri">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> TAGS </th>
+        <td [routerLink]="['/ofertas', element.id]"  mat-cell *matCellDef="let element" ><p>{{element.descri}}</p></td> <br>
+      </ng-container> -->
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[10, 30, 45, 100]"></mat-paginator>
+  </div>
+</section>
+
+
+
+</article>

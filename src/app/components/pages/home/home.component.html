@@ -1,0 +1,837 @@
+<!--
+<article >
+  <div id="wrapper">
+
+
+
+    <div class="page-content">
+
+
+
+        <div class="container">
+
+            <h2 class="mb-2"> Categorías </h2>
+
+            <div class="section-header">
+                <div class="section-header-left">
+                    <h4> Escoge una Categoría</h4>
+                </div>
+                <div class="section-header-right">
+                    <a href="#" class="see-all"> Ver Todas </a>
+                </div>
+            </div>
+
+            <div class="uk-child-width-1-3@s uk-child-width-1-4@m" uk-grid="">
+
+                <div *ngFor="let i of categorias | async | slice:0:1;">
+                    <a [routerLink]="['/anime']" class="skill-card">
+
+                        <i class="{{i.img}}" style="color:#2bd101">
+                          <img src="{{i.img1}}" width="55px" class="img-fluid " alt="">
+                        </i>
+                        <div>
+                            <h2 class="skill-card-title">{{i.p1}}</h2>
+                            <p class="skill-card-subtitle">{{i.np}}<span class="skill-card-bullet"></span>
+                              {{i.par1}}
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div *ngFor="let i of categorias | async | slice:1:2;">
+                  <a [routerLink]="['/categoria', i?.id]" class="skill-card">
+
+                      <i class="{{i.img}}" style="color:#2bd101">
+                        <img src="{{i.img1}}" width="55px" class="img-fluid " alt="">
+                      </i>
+                      <div>
+                          <h2 class="skill-card-title">{{i.p1}}</h2>
+                          <p class="skill-card-subtitle">{{i.np}}<span class="skill-card-bullet"></span>
+                            {{i.par1}}
+                          </p>
+                      </div>
+                  </a>
+              </div>
+
+              <div *ngFor="let i of categorias | async | slice:2:3;">
+                <a [routerLink]="['/categoria', i?.id]" class="skill-card">
+
+                    <i class="{{i.img}}" style="color:#2bd101">
+                      <img src="{{i.img1}}" width="55px" class="img-fluid " alt="">
+                    </i>
+                    <div>
+                        <h2 class="skill-card-title">{{i.p1}}</h2>
+                        <p class="skill-card-subtitle">{{i.np}}<span class="skill-card-bullet"></span>
+                          {{i.par1}}
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div *ngFor="let i of categorias | async | slice:3:4;">
+              <a [routerLink]="['/categoria', i?.id]" class="skill-card">
+
+                  <i class="{{i.img}}" style="color:#2bd101">
+                    <img src="{{i.img1}}" width="55px" class="img-fluid" alt="">
+                  </i>
+                  <div>
+                      <h2 class="skill-card-title">{{i.p1}}</h2>
+                      <p class="skill-card-subtitle">{{i.np}}<span class="skill-card-bullet"></span>
+                        {{i.par1}}
+                      </p>
+                  </div>
+              </a>
+          </div>
+
+          <div *ngFor="let i of categorias | async | slice:4:5;">
+            <a [routerLink]="['/categoria', i?.id]" class="skill-card">
+
+                <i class="{{i.img}}" style="color:#2bd101">
+                  <img src="{{i.img1}}" width="55px" class="img-fluid" alt="">
+                </i>
+                <div>
+                    <h2 class="skill-card-title">{{i.p1}}</h2>
+                    <p class="skill-card-subtitle">{{i.np}}<span class="skill-card-bullet"></span>
+                      {{i.par1}}
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div *ngFor="let i of categorias | async | slice:5:6;">
+          <a [routerLink]="['/memes']" class="skill-card">
+
+              <i class="{{i.img}}" style="color:#2bd101">
+                <img src="{{i.img1}}" width="55px" class="img-fluid" alt="">
+              </i>
+              <div>
+                  <h2 class="skill-card-title">{{i.p1}}</h2>
+                  <p class="skill-card-subtitle">{{i.np}}<span class="skill-card-bullet"></span>
+                    {{i.par1}}
+                  </p>
+              </div>
+          </a>
+      </div>
+
+      <div *ngFor="let i of categorias | async | slice:6:7;">
+        <a [routerLink]="['/categoria', i?.id]" class="skill-card">
+
+            <i class="{{i.img}}" style="color:#2bd101">
+              <img src="{{i.img1}}" width="55px" class="img-fluid" alt="">
+            </i>
+            <div>
+                <h2 class="skill-card-title">{{i.p1}}</h2>
+                <p class="skill-card-subtitle">{{i.np}}<span class="skill-card-bullet"></span>
+                  {{i.par1}}
+                </p>
+            </div>
+        </a>
+      </div>
+
+      <div *ngFor="let i of categorias | async | slice:7:8;">
+        <a [routerLink]="['/memes']" class="skill-card">
+
+            <i class="{{i.img}}" style="color:#2bd101">
+              <img src="{{i.img1}}" width="55px" class="img-fluid" alt="">
+            </i>
+            <div>
+                <h2 class="skill-card-title">{{i.p1}}</h2>
+                <p class="skill-card-subtitle">{{i.np}}<span class="skill-card-bullet"></span>
+                  {{i.par1}}
+                </p>
+            </div>
+        </a>
+      </div>
+
+      <div *ngFor="let i of categorias | async | slice:8:9;">
+        <a [routerLink]="['/categoria', i?.id]" class="skill-card">
+
+            <i class="{{i.img}}" style="color:#2bd101">
+              <img src="{{i.img1}}" width="55px" class="img-fluid" alt="">
+            </i>
+            <div>
+                <h2 class="skill-card-title">{{i.p1}}</h2>
+                <p class="skill-card-subtitle">{{i.np}}<span class="skill-card-bullet"></span>
+                  {{i.par1}}
+                </p>
+            </div>
+        </a>
+      </div>
+
+      <div *ngFor="let i of categorias | async | slice:9:10;">
+        <a [routerLink]="['/categoria', i?.id]" class="skill-card">
+
+            <i class="{{i.img}}" style="color:#2bd101"></i>
+
+            <div>
+                <h2 class="skill-card-title">{{i.p1}}</h2>
+                <p class="skill-card-subtitle">{{i.np}}<span class="skill-card-bullet"></span>
+                  {{i.par1}}
+                </p>
+            </div>
+        </a>
+      </div>
+
+      <div *ngFor="let i of categorias | async | slice:10:11;">
+        <a [routerLink]="['/categoria', i?.id]" class="skill-card">
+
+            <i class="{{i.img}}" style="color:#2bd101">
+              <img src="{{i.img1}}" width="55px" class="img-fluid" alt="">
+            </i>
+            <div>
+                <h2 class="skill-card-title">{{i.p1}}</h2>
+                <p class="skill-card-subtitle">{{i.np}}<span class="skill-card-bullet"></span>
+                  {{i.par1}}
+                </p>
+            </div>
+        </a>
+      </div>
+
+      <div *ngFor="let i of categorias | async | slice:11:12;">
+        <a [routerLink]="['/random']" class="skill-card">
+
+            <i class="{{i.img}}" style="color:#2bd101">
+              <img src="{{i.img1}}" width="55px" class="img-fluid" alt="">
+            </i>
+            <div>
+                <h2 class="skill-card-title">{{i.p1}}</h2>
+                <p class="skill-card-subtitle">{{i.np}}<span class="skill-card-bullet"></span>
+                  {{i.par1}}
+                </p>
+            </div>
+        </a>
+      </div>
+
+            </div>
+
+            <h4 class="mt-lg-7 mt-4">Tópicos Populares</h4>
+            <div class="uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid="">
+                <div>
+                    <a href="course-path-level.html">
+                        <div class="course-path-card">
+                            <img src="..\assets\images\course\p-1.png" alt="">
+                            <div class="course-path-card-contents">
+                                <h3> JavaScript </h3>
+                                <p> JavaScript is how you build interactivity on the web ...
+                                </p>
+                                <div class="course-progressbar mt-3">
+                                    <div class="course-progressbar-filler" style="width:25%"></div>
+                                </div>
+                            </div>
+                            <div class="course-path-card-footer">
+                                <h5> <i class="icon-feather-film mr-1"></i> 24 Lectures </h5>
+                                <div>
+                                    <h5>
+                                        <i class="icon-feather-clock mr-1"></i>
+                                        55 Hours </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="course-path-level.html">
+                        <div class="course-path-card">
+                            <img src="..\assets\images\course\p-2.png" alt="">
+                            <div class="course-path-card-contents">
+                                <h3> CSS3 Basics </h3>
+                                <p> Lorem ipsum adipiscing elit, sed do eiusmod tempor labore
+                                </p>
+                                <div class="course-progressbar mt-3">
+                                    <div class="course-progressbar-filler" style="width:25%"></div>
+                                </div>
+                            </div>
+                            <div class="course-path-card-footer">
+                                <h5> <i class="icon-feather-film mr-1"></i> 24 Lectures </h5>
+                                <div>
+                                    <h5>
+                                        <i class="icon-feather-clock mr-1"></i>
+                                        55 Hours </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="course-path-level.html">
+                        <div class="course-path-card">
+                            <img src="..\assets\images\course\p-3.png" alt="">
+                            <div class="course-path-card-contents">
+                                <h3> HTML Introduction </h3>
+                                <p>HTML is the building blocks of the web. It gives pages ..
+                                </p>
+                                <div class="course-progressbar mt-3">
+                                    <div class="course-progressbar-filler" style="width:25%"></div>
+                                </div>
+                            </div>
+                            <div class="course-path-card-footer">
+                                <h5> <i class="icon-feather-film mr-1"></i> 24 Lectures </h5>
+                                <div>
+                                    <h5>
+                                        <i class="icon-feather-clock mr-1"></i>
+                                        55 Hours </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="course-path-level.html">
+                        <div class="course-path-card">
+                            <img src="..\assets\images\course\p-1.png" alt="">
+                            <div class="course-path-card-contents">
+                                <h3> JavaScript </h3>
+                                <p> JavaScript is how you build interactivity on the web ...
+                                </p>
+                                <div class="course-progressbar mt-3">
+                                    <div class="course-progressbar-filler" style="width:25%"></div>
+                                </div>
+                            </div>
+                            <div class="course-path-card-footer">
+                                <h5> <i class="icon-feather-film mr-1"></i> 24 Lectures </h5>
+                                <div>
+                                    <h5>
+                                        <i class="icon-feather-clock mr-1"></i>
+                                        55 Hours </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="uk-grid-collapse" uk-grid="">
+                    <div class="uk-width-expand@s uk-first-column">
+                        <p>© 2019 <strong>Courseplus</strong>. All Rights Reserved. </p>
+                    </div>
+                    <div class="uk-width-auto@s">
+                        <nav class="footer-nav-icon">
+                            <ul>
+                                <li><a href="#"><i class="icon-brand-facebook"></i></a></li>
+                                <li><a href="#"><i class="icon-brand-dribbble"></i></a></li>
+                                <li><a href="#"><i class="icon-brand-youtube"></i></a></li>
+                                <li><a href="#"><i class="icon-brand-twitter"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+  </div>
+
+</article> -->
+
+
+<article>
+
+        <div id="wrapper">
+
+          <div class="container">
+            <div class="page-content">
+
+              <div class="">
+
+                  <h2 class="mb-1"> BIENVENID@ </h2>
+
+                  <div class="section-header">
+                      <div class="section-header-left">
+                          <h4>+ Populares</h4>
+                      </div>
+
+                      <div class="uk-margin col-md-3">
+                        <label class="uk-form-label" for="form-horizontal-select">ORDENAR POR:</label>
+                        <div class="uk-form-controls">
+                          <select class="uk-select" id="form-horizontal-select">
+                            <option [routerLink]="['/home']">Orden Alfabético</option>
+                            <option>Más Recientes</option>
+                            <option>Más Antiguos</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="section-header-right">
+                          <a [routerLink]="['/listado-categorias']" class="see-all"> Ver todas +</a>
+                      </div>
+                  </div>
+
+                  <div class="uk-child-width-1-3@s uk-child-width-1-4@m" uk-grid="">
+
+                      <div *ngFor="let i of categorias | async | slice:0:1;">
+                          <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                              <i class="{{i.img}}" style="color:#dd0031"></i>
+                              <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                              <div>
+                                  <h2 class="skill-card-title"> {{i.p1}}</h2>
+                                  <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                                  </p>
+                              </div>
+                          </a>
+                      </div>
+
+                      <div *ngFor="let i of categorias | async | slice:1:2;">
+                        <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                            <i class="{{i.img}}" style="color:#dd0031"></i>
+                            <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                            <div>
+                                <h2 class="skill-card-title"> {{i.p1}}</h2>
+                                <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div *ngFor="let i of categorias | async | slice:2:3;">
+                      <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                          <i class="{{i.img}}" style="color:#dd0031"></i>
+                          <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                          <div>
+                              <h2 class="skill-card-title"> {{i.p1}}</h2>
+                              <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                              </p>
+                          </div>
+                      </a>
+                  </div>
+
+                  <div *ngFor="let i of categorias | async | slice:3:4;">
+                    <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                        <i class="{{i.img}}" style="color:#dd0031"></i>
+                        <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                        <div>
+                            <h2 class="skill-card-title"> {{i.p1}}</h2>
+                            <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div *ngFor="let i of categorias | async | slice:4:5;">
+                  <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                      <i class="{{i.img}}" style="color:#dd0031"></i>
+                      <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                      <div>
+                          <h2 class="skill-card-title"> {{i.p1}}</h2>
+                          <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                          </p>
+                      </div>
+                  </a>
+              </div>
+
+              <div *ngFor="let i of categorias | async | slice:5:6;">
+                <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                    <i class="{{i.img}}" style="color:#dd0031"></i>
+                    <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                    <div>
+                        <h2 class="skill-card-title"> {{i.p1}}</h2>
+                        <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+              <div *ngFor="let i of categorias | async | slice:6:7;">
+                <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                    <i class="{{i.img}}" style="color:#dd0031"></i>
+                    <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                    <div>
+                        <h2 class="skill-card-title"> {{i.p1}}</h2>
+                        <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+              <div *ngFor="let i of categorias | async | slice:7:8;">
+                <a style="border: #492170 1px dashed;" [routerLink]="['/memes']" class="skill-card">
+                    <i class="{{i.img}}" style="color:#dd0031"></i>
+                    <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                    <div>
+                        <h2 class="skill-card-title"> {{i.p1}}</h2>
+                        <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div *ngFor="let i of categorias | async | slice:8:9;">
+              <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                  <i class="{{i.img}}" style="color:#dd0031"></i>
+                  <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                  <div>
+                      <h2 class="skill-card-title"> {{i.p1}}</h2>
+                      <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                      </p>
+                  </div>
+              </a>
+          </div>
+
+          <div *ngFor="let i of categorias | async | slice:9:10;">
+            <a style="border: #492170 1px dashed;" [routerLink]="['/memes']" class="skill-card">
+                <i class="{{i.img}}" style="color:#dd0031"></i>
+                <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                <div>
+                    <h2 class="skill-card-title"> {{i.p1}}</h2>
+                    <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                    </p>
+                </div>
+            </a>
+        </div>
+
+          <div *ngFor="let i of categorias | async | slice:10:11;">
+            <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                <i class="{{i.img}}" style="color:#dd0031"></i>
+                <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                <div>
+                    <h2 class="skill-card-title"> {{i.p1}}</h2>
+                    <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div *ngFor="let i of categorias | async | slice:11:12;">
+          <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+              <i class="{{i.img}}" style="color:#dd0031"></i>
+              <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+              <div>
+                  <h2 class="skill-card-title"> {{i.p1}}</h2>
+                  <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                  </p>
+              </div>
+          </a>
+        </div>
+
+        <div *ngFor="let i of categorias | async | slice:12:13;">
+          <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+              <i class="{{i.img}}" style="color:#dd0031"></i>
+              <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+              <div>
+                  <h2 class="skill-card-title"> {{i.p1}}</h2>
+                  <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                  </p>
+              </div>
+          </a>
+        </div>
+
+        <div *ngFor="let i of categorias | async | slice:13:14;">
+          <a style="border: #492170 1px dashed;" [routerLink]="['/preguntas']" class="skill-card">
+              <i class="{{i.img}}" style="color:#dd0031"></i>
+              <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+              <div>
+                  <h2 class="skill-card-title"> {{i.p1}}</h2>
+                  <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                  </p>
+              </div>
+          </a>
+        </div>
+
+        <div *ngFor="let i of categorias | async | slice:14:15;">
+          <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+              <i class="{{i.img}}" style="color:#dd0031"></i>
+              <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+              <div>
+                  <h2 class="skill-card-title"> {{i.p1}}</h2>
+                  <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                  </p>
+              </div>
+          </a>
+        </div>
+
+        <div *ngFor="let i of categorias | async | slice:15:16;">
+          <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+              <i class="{{i.img}}" style="color:#dd0031"></i>
+              <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+              <div>
+                  <h2 class="skill-card-title"> {{i.p1}}</h2>
+                  <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                  </p>
+              </div>
+          </a>
+        </div>
+
+        <div *ngFor="let i of categorias | async | slice:16:17;">
+            <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                <i class="{{i.img}}" style="color:#dd0031"></i>
+                <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                <div>
+                    <h2 class="skill-card-title"> {{i.p1}}</h2>
+                    <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                    </p>
+                </div>
+            </a>
+          </div>
+
+          <div *ngFor="let i of categorias | async | slice:17:18;">
+            <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                <i class="{{i.img}}" style="color:#dd0031"></i>
+                <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                <div>
+                    <h2 class="skill-card-title"> {{i.p1}}</h2>
+                    <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                    </p>
+                </div>
+            </a>
+          </div>
+
+          <div *ngFor="let i of categorias | async | slice:19:20;">
+            <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                <i class="{{i.img}}" style="color:#dd0031"></i>
+                <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                <div>
+                    <h2 class="skill-card-title"> {{i.p1}}</h2>
+                    <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                    </p>
+                </div>
+            </a>
+          </div>
+
+          <div *ngFor="let i of categorias | async | slice:20:21;">
+            <a style="border: #492170 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                <i class="{{i.img}}" style="color:#dd0031"></i>
+                <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                <div>
+                    <h2 class="skill-card-title"> {{i.p1}}</h2>
+                    <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                    </p>
+                </div>
+            </a>
+          </div>
+
+
+
+                  </div>
+
+
+          <h4 id="transtion" class="uk-margin-medium-top">TAGS + POPULARES</h4>
+
+            <div class="mt-3" uk-margin="">
+                <button type="button" class="btn btn-primary mr-1 transition-3d-hover">
+                    #Primary
+                  </button>
+                  <button type="button " class="btn btn-success mr-1 transition-3d-hover">
+                    #Success
+                  </button>
+                  <button type="button" class="btn btn-danger mr-1 transition-3d-hover">
+                    #Danger
+                  </button>
+                  <button type="button" class="btn btn-warning mr-1 transition-3d-hover">
+                    #Warning
+                  </button>
+            </div>
+
+
+
+            <!-- <div class="uk-child-width-1-3@s uk-child-width-1-4@m" uk-grid="">
+
+                <div *ngFor="let i of categorias | async | slice:13:14;">
+                    <a style="border: #28a745 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                        <i class="{{i.img}}" style="color:#dd0031"></i>
+                        <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                        <div>
+                            <h2 class="skill-card-title"> {{i.p1}}</h2>
+                            <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div *ngFor="let i of categorias | async | slice:14:15;">
+                    <a style="border: #28a745 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                        <i class="{{i.img}}" style="color:#dd0031"></i>
+                        <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                        <div>
+                            <h2 class="skill-card-title"> {{i.p1}}</h2>
+                            <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div *ngFor="let i of categorias | async | slice:15:16;">
+                    <a style="border: #28a745 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                        <i class="{{i.img}}" style="color:#dd0031"></i>
+                        <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                        <div>
+                            <h2 class="skill-card-title"> {{i.p1}}</h2>
+                            <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div *ngFor="let i of categorias | async | slice:16:17;">
+                    <a style="border: #28a745 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                        <i class="{{i.img}}" style="color:#dd0031"></i>
+                        <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                        <div>
+                            <h2 class="skill-card-title"> {{i.p1}}</h2>
+                            <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                            </p>
+                        </div>
+                    </a>
+                    </div>
+
+                    <div *ngFor="let i of categorias | async | slice:17:18;">
+                    <a style="border: #28a745 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                        <i class="{{i.img}}" style="color:#dd0031"></i>
+                        <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                        <div>
+                            <h2 class="skill-card-title"> {{i.p1}}</h2>
+                            <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                            </p>
+                        </div>
+                    </a>
+                    </div>
+
+                    <div *ngFor="let i of categorias | async | slice:19:20;">
+                    <a style="border: #28a745 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                        <i class="{{i.img}}" style="color:#dd0031"></i>
+                        <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                        <div>
+                            <h2 class="skill-card-title"> {{i.p1}}</h2>
+                            <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                            </p>
+                        </div>
+                    </a>
+                    </div>
+
+                    <div *ngFor="let i of categorias | async | slice:20:21;">
+                    <a style="border: #28a745 1px dashed;" [routerLink]="['/anime']" class="skill-card">
+                        <i class="{{i.img}}" style="color:#dd0031"></i>
+                        <img src="{{i.img1}}" class="img-fluid avatar mr-3" alt="">
+                        <div>
+                            <h2 class="skill-card-title"> HOLA</h2>
+                            <p class="skill-card-subtitle"> {{i.np}} <span class="skill-card-bullet"></span>
+                            </p>
+                        </div>
+                    </a>
+                    </div>
+
+
+
+            </div> -->
+
+                  <h4 class="mt-lg-7 mt-4">TÓPICOS POPULARES</h4>
+                  <div class="uk-child-width-1-2@s uk-child-width-1-4@m my-3" uk-grid="">
+                      <div>
+                          <a href="course-path-level.html">
+                              <div class="course-path-card">
+                                  <img src="..\assets\images\course\p-1.png" alt="">
+                                  <div class="course-path-card-contents">
+                                      <h3> JavaScript </h3>
+                                      <p> JavaScript is how you build interactivity on the web ...
+                                      </p>
+                                      <div class="course-progressbar mt-3">
+                                          <div class="course-progressbar-filler" style="width:25%"></div>
+                                      </div>
+                                  </div>
+                                  <div class="course-path-card-footer">
+                                      <h5> <i class="icon-feather-film mr-1"></i> 24 Lectures </h5>
+                                      <div>
+                                          <h5>
+                                              <i class="icon-feather-clock mr-1"></i>
+                                              55 Hours </h5>
+
+                                      </div>
+                                  </div>
+                              </div>
+                          </a>
+                      </div>
+                      <div>
+                          <a href="course-path-level.html">
+                              <div class="course-path-card">
+                                  <img src="..\assets\images\course\p-2.png" alt="">
+                                  <div class="course-path-card-contents">
+                                      <h3> CSS3 Basics </h3>
+                                      <p> Lorem ipsum adipiscing elit, sed do eiusmod tempor..
+                                      </p>
+                                      <div class="course-progressbar mt-3">
+                                          <div class="course-progressbar-filler" style="width:25%"></div>
+                                      </div>
+                                  </div>
+                                  <div class="course-path-card-footer">
+                                      <h5> <i class="icon-feather-film mr-1"></i> 24 Lectures </h5>
+                                      <div>
+                                          <h5>
+                                              <i class="icon-feather-clock mr-1"></i>
+                                              55 Hours </h5>
+
+                                      </div>
+                                  </div>
+                              </div>
+                          </a>
+                      </div>
+                      <div>
+                          <a href="course-path-level.html">
+                              <div class="course-path-card">
+                                  <img src="..\assets\images\course\p-3.png" alt="">
+                                  <div class="course-path-card-contents">
+                                      <h3> HTML Introduction </h3>
+                                      <p>HTML is the building blocks of the web. It gives pages ..
+                                      </p>
+                                      <div class="course-progressbar mt-3">
+                                          <div class="course-progressbar-filler" style="width:25%"></div>
+                                      </div>
+                                  </div>
+                                  <div class="course-path-card-footer">
+                                      <h5> <i class="icon-feather-film mr-1"></i> 24 Lectures </h5>
+                                      <div>
+                                          <h5>
+                                              <i class="icon-feather-clock mr-1"></i>
+                                              55 Hours </h5>
+
+                                      </div>
+                                  </div>
+                              </div>
+                          </a>
+                      </div>
+                      <div>
+                          <a href="course-path-level.html">
+                              <div class="course-path-card">
+                                  <img src="..\assets\images\course\p-1.png" alt="">
+                                  <div class="course-path-card-contents">
+                                      <h3> JavaScript </h3>
+                                      <p> JavaScript is how you build interactivity on the web ...
+                                      </p>
+                                      <div class="course-progressbar mt-3">
+                                          <div class="course-progressbar-filler" style="width:25%"></div>
+                                      </div>
+                                  </div>
+                                  <div class="course-path-card-footer">
+                                      <h5> <i class="icon-feather-film mr-1"></i> 24 Lectures </h5>
+                                      <div>
+                                          <h5>
+                                              <i class="icon-feather-clock mr-1"></i>
+                                              55 Hours </h5>
+
+                                      </div>
+                                  </div>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+
+
+
+              </div>
+
+
+          </div>
+          </div>
+
+
+
+        </div>
+
+
+
+
+</article>

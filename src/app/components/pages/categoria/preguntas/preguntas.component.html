@@ -1,0 +1,155 @@
+<div class="container">
+
+  <div class="home__header">
+    <div class="home__header__left">
+      <img mat-card-avatar src="assets/fb-head.jpg"/>
+      <div class="input">
+        <i class="search-icon">search_outline</i>
+        <form>
+          <input placeholder="Search Facebook" type="text">
+        </form>
+      </div>
+
+    </div>
+    <div class="home__header__middle">
+      <div class="active">
+        <i>home</i>
+      </div>
+      <div>
+        <i>ondemand_video</i>
+      </div>
+      <div>
+        <i>store</i>
+      </div>
+      <div>
+        <i>group</i>
+      </div>
+      <div>
+        <i>flag</i>
+      </div>
+
+    </div>
+    <div class="home__header__right">
+      <div>
+        <img
+          alt=""
+          mat-card-avatar
+          [src]="user?.photoURL">
+        <span class="name">{{ user?.displayName || 'Indranil'}}</span>
+      </div>
+      <div>
+        <i>add</i>
+      </div>
+
+      <div>
+        <i matBadge="4"
+                  matBadgeColor="primary"
+                  matBadgeOverlap="false"
+                  matBadgePosition="above after"> forum
+        </i>
+      </div>
+
+      <div>
+        <i matBadge="3"
+                  matBadgeColor="warn"
+                  matBadgeOverlap="false">notifications
+        </i>
+      </div>
+
+
+      <div>
+
+        <i >expand_more</i>
+        <div>
+          <button mat-menu-item (click)="logout()">
+            <i>exit_to_app</i> Logout
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="home__body">
+
+
+
+    <div class="home__body__contentMiddle">
+
+      <div class="home__body__contentMiddle__top">
+        <!--IMAGE CARDS-->
+        <div *ngFor="let i of images" class="image-card">
+          <img alt="bg"
+               class="bg" src="{{ i }}">
+          <div>
+            <img
+              alt="avatar"
+              class="avatar col-2 img-fluid" src="https://scontent.fdel8-1.fna.fbcdn.net/v/t1.0-1/cp0/p50x50/15078703_10211571832470683_2854551810050518303_n.jpg?_nc_cat=105&_nc_sid=7206a8&_nc_ohc=YSQBDLYrXHgAX_7KBWW&_nc_ht=scontent.fdel8-1.fna&oh=298837f1c1ebe1f884ce2525d31f39b1&oe=5F6F741A">
+            <span class="card-name">Indranil Mukherjee</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="home__body__contentMiddle__center">
+        <div class="post-message">
+          <div class="post-message-header"
+                           style="padding-bottom: 20px; border-bottom: 1px solid lightgray;">
+            <img
+              alt=""
+              mat-card-avatar
+              [src]="user?.photoURL">
+            <form #form="ngForm" (ngSubmit)="postMessage(form)">
+              <input class="on-your-mind" name="message" ngModel placeholder="What's on your mind?" type="text">
+              <button class="btn btn-success" type="submit">PUBLICAR</button>
+            </form>
+
+          </div>
+          <div class="card-body">
+            <div>
+              <i color="accent">videocam</i>
+              <span>Live Video</span>
+            </div>
+
+            <div>
+              <i color="primary">photo_album</i>
+              <span>Photo/Video</span>
+            </div>
+
+            <div>
+              <i color="warn">mood</i>
+              <span>Feeling/Activity</span>
+            </div>
+          </div>
+        </div>
+
+        <!--Loop Through All Posts From Database and Display-->
+        <div *ngFor="let p of posts" class="posts">
+          <div class="posts__header">
+            <img alt="{{ p?.title }}" class="avatar" [src]="p?.avatar">
+            <div class="posts__header__right">
+              <span>{{ p?.time?.seconds * 1000 | date:'shortTime' }}</span>
+              <h3>{{ p?.title }}</h3>
+            </div>
+          </div>
+          <div class="posts__body">
+            <p>{{ p?.message }}</p>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+    <div class="home__body__feedRight">
+      <div class="inside">
+        <img alt="feed" src="assets/feed.jpg">
+      </div>
+
+
+    </div>
+
+  </div>
+</div>

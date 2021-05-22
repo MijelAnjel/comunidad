@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'comunidad';
+
+  onDeactivate() {
+    document.body.scrollTop = 0;
+  }
 }

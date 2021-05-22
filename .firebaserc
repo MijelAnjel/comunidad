@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "publicamiwea": {
+      "hosting": {
+        "comunidad": [
+          "publicamiwea"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "publicamiwea"
+  }
+}

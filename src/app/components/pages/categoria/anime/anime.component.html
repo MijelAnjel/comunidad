@@ -1,0 +1,704 @@
+<article>
+  <div class="page-content">
+
+
+    <div style="
+    background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.651),
+      rgba(0, 0, 0, 0.61)
+    ),
+    url(assets/images/wa1.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #fff;" class="course-details-wrapper topic-1 uk-light">
+        <div class="page-content-inner pt-lg-7 pb-0">
+
+            <div class="uk-grid-large" uk-grid="">
+
+                <!-- <div class="uk-width-1-2@m">
+                    <div class="course-thumbnail">
+                        <img src="..\assets\images\course\1.png" alt="">
+                        <a class="play-button-trigger" href="#trailer-modal" uk-toggle=""> </a>
+                    </div>
+
+                    <div id="trailer-modal" uk-modal="">
+                        <div class="uk-modal-dialog">
+                            <button class="uk-modal-close-default mt-2  mr-1" type="button" uk-close=""></button>
+                            <div class="uk-modal-header">
+                                <h4> Trailer video </h4>
+                            </div>
+                            <div class="video-responsive">
+                                <iframe src="https://www.youtube.com/embed/nOCXXHGMezU" class="uk-padding-remove" uk-video="automute: true" frameborder="0" allowfullscreen="" uk-responsive=""></iframe>
+                            </div>
+
+                            <div class="uk-modal-body">
+                                <h3>Build Responsive Websites </h3>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                    eu
+                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                                    in
+                                    culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> -->
+                <div class="uk-width-1-2@m course-details mt-0">
+                    <h1> Comunidad de Animé</h1>
+                    <p> Master JavaScript with the most complete course! Projects Excellent course. we explain
+                        the
+                        core concepts in javascript that are usually glossed over in other courses.
+                    </p>
+
+                    <div class="course-details-info mt-5">
+                        <ul>
+                            <li>
+                                <div class="star-rating"><span class="avg"> 5.0 </span> <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+                                </div>
+                            </li>
+                            <li> <i class="icon-feather-users"></i> COMUNIDAD ANIMÉ </li>
+                        </ul>
+                    </div>
+                    <!-- <div class="course-details-info">
+
+                        <ul>
+                            <li> Created by <a href="#"> Jonathan Madano </a> </li>
+                            <li> Last updated 10/2019</li>
+                            <li> English </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                        <div class="uk-visible@s">
+                            <a hred="#" uk-tooltip="title: Add to your Bookmarks ; pos: top">
+                                <i class="icon-feather-bookmark icon-small"></i> </a>
+                            <a hred="#" uk-tooltip="title: Add to wishlist ; pos: top">
+                                <i class="icon-feather-heart icon-small ml-3 text-danger"></i> </a>
+                        </div>
+                        <a href="takecouse.html" class="btn-course-start-2 my-4 mb-sm-0"> Start Learning
+                            <i class="icon-feather-chevron-right"></i> </a>
+                    </div> -->
+
+
+                </div>
+
+            </div>
+
+            <nav class="responsive-tab style-5">
+              <ul uk-switcher="connect: #course-intro-tab ;animation: uk-animation-slide-right-medium, uk-animation-slide-left-medium">
+                  <li><a href="#">Foro-Comunidad</a></li>
+                  <li><a href="#">Posts</a></li>
+                  <li><a href="#">Reglas</a></li>
+                  <!-- <li><a href="#">Reglas</a></li>
+                  <li><a href="#">OTROS</a></li> -->
+              </ul>
+          </nav>
+
+        </div>
+    </div>
+
+    <div class="page-content-inner">
+
+        <div class="uk-grid-large" uk-grid="">
+
+
+
+          <div class="uk-width-2-3@m">
+
+            <!-- <div *ngIf="authSvc.userData$ | async; else showLogin" class="uk-margin">
+              <button  data-toggle="modal" data-target="#basicExampleModalanime" class="btn btn-success">+ CREAR PUBLICACIÓN</button>
+            </div>
+
+            <ng-template #showLogin>
+              <button  data-toggle="modal" data-target="#basicExampleModalnegativo" class="btn btn-success">+ CREAR PUBLICACIÓN</button>
+            </ng-template> -->
+
+            <ul id="course-intro-tab" class="uk-switcher mt-4">
+
+                <!-- course Curriculum-->
+                <li>
+
+                    <ul class="course-curriculum" uk-accordion="multiple: true">
+
+                        <li class="uk-open">
+                          <div *ngIf="authSvc.userData$ | async; else showLogin" class="uk-margin">
+                            <button  data-toggle="modal" data-target="#basicExampleModalanime" class="btn btn-success">+ CREAR PUBLICACIÓN</button>
+                          </div>
+
+                          <ng-template #showLogin>
+                            <button  data-toggle="modal" data-target="#basicExampleModalnegativo" class="btn btn-success">+ CREAR PUBLICACIÓN</button>
+                          </ng-template>
+                            <a class="uk-accordion-title"> Publicaciones </a>
+                            <div *ngFor="let i of anime |async; index as id;" class="uk-accordion-content">
+
+                                <!-- course-video-list -->
+                                <ul [routerLink]="['/categoria', i?.id]" class="course-curriculum-list">
+                                    <!-- <li> What is HTML <span> 23 min </span>
+                                    <li> What is a Web page? <span> 23 min </span> href="#trailer-modal" </li> -->
+                                    <li>  {{i['titlePost']}} <a  uk-toggle="">  {{i['tagsPost']}}
+                                        </a> <span> {{ i.createdDate.toDate() |date}}</span>
+                                    </li>
+                                    <!-- <li> Brain Streak <span> 23 min </span> </li> -->
+                                </ul>
+
+                            </div>
+
+
+                    </ul>
+
+
+
+                <!-- course description -->
+                <li class="course-description-content">
+
+                  <div class="comments">
+
+                    <h4>CAJA DE COMENTARIOS GENERAL <span class="comments-amount"> :D </span> </h4>
+
+                    <div id="disqus_thread"></div>
+                    <script>
+
+                        (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://publicamiwea.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+                </div>
+
+                </li>
+
+                <!-- course Faq-->
+                <!-- <li>
+
+                    <h4 class="my-4"> Conoce las Sub-Comunidades</h4>
+
+                    <ul class="course-faq card" uk-accordion="">
+
+                        <li class="uk-">
+                            <a class="uk-accordion-title" href="#"> Dragon Ball
+                              <div *ngIf="authSvc.userData$ | async; else showLogin" class="uk-margin">
+
+                                <button  data-toggle="modal" data-target="#basicExampleModalanime"
+                                class="btn btn-outline-success btn-sm float-right">
+                                <i class="icon-material-outline-library-add"></i>
+                                PUBLICAR
+                              </button>
+                              </div>
+                            </a>
+
+
+                            <div class="uk-accordion-content">
+
+                              <ul class="course-curriculum" uk-accordion="multiple: false">
+
+                                <li class="uk-open">
+                                     <a class="uk-accordion-title"> Publicaciones </a>
+                                    <div *ngFor="let i of anime |async; index as id;" class="uk-accordion-content">
+
+                                        <ul [routerLink]="['/categoria', i?.id]" class="course-curriculum-list">
+                                             <li> What is HTML <span> 23 min </span>
+                                            <li> What is a Web page? <span> 23 min </span> href="#trailer-modal" </li>
+                                            <li>  {{i['titlePost']}} <a  uk-toggle="">  {{i['tagsPost']}}
+                                                </a> <span> {{ i.createdDate.toDate() |date}}</span>
+                                            </li>
+                                            <li> Brain Streak <span> 23 min </span> </li>
+                                        </ul>
+
+                                    </div>
+                            </ul>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <a class="uk-accordion-title" href="#"> Some Special Tags </a>
+                            <div class="uk-accordion-content">
+                                <p> The primary goal of this quick start guide is to introduce you to
+                                    Unreal
+                                    Engine 4`s (UE4) development environment. By the end of this guide,
+                                    you`ll
+                                    know how to set up and develop C++ Projects in UE4. This guide shows
+                                    you
+                                    how
+                                    to create a new Unreal Engine project, add a new C++ class to it,
+                                    compile
+                                    the project, and add an instance of a new class to your level. By
+                                    the
+                                    time
+                                    you reach the end of this guide, you`ll be able to see your
+                                    programmed
+                                    Actor
+                                    floating above a table in the level. </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a class="uk-accordion-title" href="#"> Html Introduction </a>
+                            <div class="uk-accordion-content">
+                                <p> The primary goal of this quick start guide is to introduce you to
+                                    Unreal
+                                    Engine 4`s (UE4) development environment. By the end of this guide,
+                                    you`ll
+                                    know how to set up and develop C++ Projects in UE4. This guide shows
+                                    you
+                                    how
+                                    to create a new Unreal Engine project, add a new C++ class to it,
+                                    compile
+                                    the project, and add an instance of a new class to your level. By
+                                    the
+                                    time
+                                    you reach the end of this guide, you`ll be able to see your
+                                    programmed
+                                    Actor
+                                    floating above a table in the level. </p>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </li> -->
+
+                <!-- course Announcement-->
+                <li>
+                    <h4> Reglas </h4>
+
+                    <div class="user-details-card">
+                        <div class="user-details-card-avatar">
+                            <img src="..\assets\images\avatars\avatar-2.jpeg" alt="">
+                        </div>
+                        <div class="user-details-card-name">
+                            Stella Johnson <span> Instructor <span> 1 year ago </span> </span>
+                        </div>
+                    </div>
+
+
+
+                    <article class="uk-article">
+
+                        <p class="lead"> Nam liber tempor cum soluta nobis eleifend option
+                            congue </p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                            aute
+                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                            nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia
+                            deserunt mollit anim id est laborum.</p>
+
+                        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                            nibh
+                            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                            enim ad
+                            minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                            ut
+                            aliquip ex ea commodo consequat. Nam liber tempor cum soluta nobis eleifend
+                            option congue nihil imperdiet doming id quod mazim placerat facer possim
+                            assum.
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                            nibh
+                            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                            enim ad
+                            minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                            ut
+                            aliquip ex ea commodo consequat.</p>
+
+
+                    </article>
+                </li>
+
+                <!-- course Reviews-->
+                <!-- <li>
+
+                    <h4> Description </h4>
+                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+                        minim laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                        quis
+                        nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+                        commodo
+                        consequat</p>
+                    <p> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                        dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                        exerci</p>
+
+
+                    <h4> What you’ll learn
+                        <div class="uk-child-width-1-2@s" uk-grid="">
+                            <div>
+                                <ul class="list-2">
+                                    <li>Setting up the environment </li>
+                                    <li>Advanced HTML Practices</li>
+                                    <li>Build a portfolio website</li>
+                                    <li>Responsive Designs</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="list-2">
+                                    <li>Understand HTML Programming</li>
+                                    <li>Code HTML</li>
+                                    <li>Start building beautiful websites</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <h4> Requirements </h4>
+                        <ul class="list-1">
+                            <li>Any computer will work: Windows, macOS or Linux</li>
+                            <li>Basic programming HTML and CSS.</li>
+                            <li>Basic/Minimal understanding of JavaScript</li>
+                        </ul>
+
+                        <h4> Here is exactly what we cover in this course: </h4>
+                        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                            nibh
+                            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                            enim ad
+                            minim laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                            veniam,
+                            quis
+                            nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+                            commodo
+                            consequat</p>
+
+                        <p> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                            laoreet
+                            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                            nostrud
+                            exerci</p>
+
+                        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                            nibh
+                            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                            enim ad
+                            minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                            ut
+                            aliquip ex ea commodo consequat. Nam liber tempor cum soluta nobis eleifend
+                            option
+                            congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+                            Lorem
+                            ipsum
+                            dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                            tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+                            minim
+                            veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                            aliquip
+                            ex
+                            ea commodo consequat.</p>
+
+
+                </h4>
+
+                </li> -->
+
+            </ul>
+        </div>
+
+
+
+
+
+
+
+            <div class="uk-width-expand">
+
+                <div class="course-info-list">
+
+                  <div class="uk-margin">
+                    <label class="uk-form-label" for="form-horizontal-select">ORDENAR POR:</label>
+                    <div class="uk-form-controls">
+                      <select class="uk-select" id="form-horizontal-select">
+                        <option>Populares</option>
+                        <option>Más Recientes</option>
+                        <option>Más Antiguos</option>
+                      </select>
+                    </div>
+                  </div>
+
+                    <div class="course-info-list-single">
+                        <div class="course-info-list-single-label">
+                            <span> Comunidades Creadas </span> : <strong> 13 Comunidades </strong>
+                        </div>
+                        <div class="course-info-list-single-icon">
+                            <i class="icon-feather-users"></i>
+                        </div>
+                    </div>
+
+                    <div class="course-info-list-single">
+                        <div class="course-info-list-single-label">
+                            <span> Subculturas </span> : <strong> 6 </strong>
+                        </div>
+                        <div class="course-info-list-single-icon">
+                            <i class="icon-feather-clock"></i>
+                        </div>
+                    </div>
+
+                    <div class="course-info-list-single">
+                        <div class="course-info-list-single-label">
+                            <span> Lectures </span> : <strong> 6 </strong>
+                        </div>
+                        <div class="course-info-list-single-icon">
+                            <i class="icon-feather-video"></i>
+                        </div>
+                    </div>
+
+                    <div class="course-info-list-single">
+                        <div class="course-info-list-single-label">
+                            <span> Eneroled </span> : <strong> 13 students </strong>
+                        </div>
+                        <div class="course-info-list-single-icon">
+                            <i class="icon-feather-video"></i>
+                        </div>
+                    </div>
+
+                    <div class="course-info-list-single">
+                        <div class="course-info-list-single-label">
+                            <span> Level</span> : <strong> Advanced </strong>
+                        </div>
+                        <div class="course-info-list-single-icon">
+                            <i class="icon-feather-bar-chart"></i>
+                        </div>
+                    </div>
+
+
+                    <h4 id="transtion" class="uk-margin-medium-top">TAGS + POPULARES</h4>
+
+                    <div class="mt-3" uk-margin="">
+                        <button type="button" class="btn btn-primary mr-1 transition-3d-hover">
+                            #Primary
+                          </button>
+                          <button type="button " class="btn btn-success mr-1 transition-3d-hover">
+                            #Success
+                          </button>
+                          <button type="button" class="btn btn-danger mr-1 transition-3d-hover">
+                            #Danger
+                          </button>
+                          <button type="button" class="btn btn-warning mr-1 transition-3d-hover">
+                            #Warning
+                          </button>
+                    </div>
+                </div>
+
+                <h4 class="mt-5 mb-4"> Related Courses</h4>
+
+                <div class="uk-child-width-1-1 mt-3" uk-grid="">
+
+                    <div>
+                        <a href="course-intro.html">
+                            <div class="course-card">
+                                <div class="course-card-thumbnail ">
+                                    <img src="..\assets\images\course\2.png">
+                                    <span class="play-button-trigger"></span>
+                                </div>
+                                <div class="course-card-body">
+                                    <div class="course-card-info">
+                                        <div>
+                                            <span class="catagroy">Angular</span>
+                                        </div>
+                                        <div>
+                                            <i class="icon-feather-bookmark icon-small"></i>
+                                        </div>
+                                    </div>
+
+                                    <h4>Learn Angular Fundamentals </h4>
+                                    <p> Learn how to build and launch React web applications... </p>
+                                    <div class="course-card-footer">
+                                        <h5> <i class="icon-feather-film"></i> 14 Lectures </h5>
+                                        <h5> <i class="icon-feather-clock"></i> 55 Hours </h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="course-intro.html">
+                            <div class="course-card">
+                                <div class="course-card-thumbnail ">
+                                    <img src="..\assets\images\course\3.png">
+                                    <span class="play-button-trigger"></span>
+                                </div>
+                                <div class="course-card-body">
+                                    <div class="course-card-info">
+                                        <div>
+                                            <span class="catagroy">JavaScript</span>
+                                        </div>
+                                        <div>
+                                            <i class="icon-feather-bookmark icon-small"></i>
+                                        </div>
+                                    </div>
+                                    <h4>The Complete JavaScript </h4>
+                                    <p> JavaScript is how you build interactivity on the web.. </p>
+                                    <div class="course-card-footer">
+                                        <h5> <i class="icon-feather-film"></i> 14 Lectures </h5>
+                                        <h5> <i class="icon-feather-clock"></i> 55 Hours </h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</article>
+
+
+<section >
+  <!-- Modal -->
+  <div class="modal fade bg-dark" id="basicExampleModalanime" tabindex="-1" role="dialog" aria-labelledby="basicExampleModal"
+    aria-hidden="true"  data-backdrop="false">
+
+    <div class="modal-dialog" role="document" >
+      <div class="modal-content col-12">
+
+
+
+          <div uk-height-viewport="expand: true" class="uk-flex uk-flex-middle col-12">
+            <div class=" m-auto">
+                <div class="py-2 px-2 rounded">
+                    <div class="mb-4 uk-text-center">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                        <h3 class="mb-0"> PUBLICA ;)</h3>
+                        <p class="my-2">¿QUÉ TEMA QUIERES COMPARTIR?</p>
+                    </div>
+                    <form [formGroup]="newPostForm" (ngSubmit)="addNewPost(newPostForm.value)">
+
+                        <div class="uk-form-group">
+                            <label class="uk-form-label"> TITULO</label>
+
+                            <div class="uk-position-relative w-100">
+                                <span class="uk-form-icon">
+                                    <i class="icon-material-outline-add"></i>
+                                </span>
+                                <input formControlName="titlePost" class="uk-input" type="text" placeholder="Título de publicación">
+                            </div>
+
+                        </div>
+
+                        <div class="uk-form-group">
+                            <label class="uk-form-label"> CONTENIDO</label>
+
+                            <div class="uk-position-relative w-100">
+                                <span class="uk-form-icon">
+                                    <i class="icon-material-outline-assignment"></i>
+                                </span>
+                                <textarea formControlName="contentPost" class="uk-input" type="text" placeholder="Máximo 300 carácteres ;)">
+                                </textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="uk-form-group">
+                          <label class="uk-form-label"> ARCHIVO</label>
+
+                          <div class="uk-position-relative w-100">
+                              <span class="uk-form-icon">
+                                  <!-- <i class="icon-material-outline-attach-file"></i> -->
+                              </span>
+                              <input  type="file" formControlName="imagePost" (change)="handleImage($event)" class="uk-input">
+                              <i class="icon-material-outline-attach-file"></i><span>CHOOSE IMAGE</span>
+                          </div>
+
+                      </div>
+
+                        <div class="uk-form-group">
+                            <label class="uk-form-label"> ¿EN QUÉ COMUNIDAD QUIERES PUBLICAR?</label>
+
+                            <div class="uk-position-relative w-100">
+                                <span class="uk-form-icon mr-2 pr-4">
+                                    <i class="text-danger" class="icon-material-outline-favorite"></i>
+                                </span>
+                                <select formControlName="tagsPost" placeholder="Tags"  class="form-control">
+                                  <option class="hidden ml-5 pl-4"  selected disabled>Selecciona tu comunidad</option>
+                                  <option class="ml-5 pl-4">Random</option>
+                                  <option class="ml-5 pl-4">Memes</option>
+                                  <option class="ml-5 pl-4">Frontera</option>
+                              </select>
+
+                            </div>
+
+                        </div>
+
+                        <div class="mt-4 uk-flex-middle uk-grid-small" uk-grid="">
+                            <div class="uk-width-expand@s">
+                                <p> ¿No ves una comunidad que te interese? <br> <a class="text-primary" href="page-register.html">¡Solicita Crear Una! ;D</a></p>
+                            </div>
+                            <div class="uk-width-auto@s">
+                                <button type="submit" class="btn btn-default"  [disabled]="newPostForm.untouched" [disabled]="newPostForm.invalid"  #closeBtn>Publicar</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+  <section >
+    <!-- Modal -->
+    <div class="modal fade bg-dark" id="basicExampleModalnegativo" tabindex="-1" role="dialog" aria-labelledby="basicExampleModal"
+      aria-hidden="true"  data-backdrop="false">
+
+      <div class="modal-dialog" role="document" >
+        <div class="modal-content col-12">
+
+
+
+          <div uk-height-viewport="expand: true" class="uk-flex uk-flex-center my-5 py-5">
+
+
+
+            <div class="m-auto text-center">
+
+                <img src="..\assets\images\maintenance.svg" alt="" class="my-3">
+
+                <h3>Para publicar debes Crear una Cuenta</h3>
+                <p class="mb-0 text-success"> Te invitamos a crear una. <br> <b>No te tomará más de 1 minuto ;)</b></p>
+                <!-- <a href="#modal-close-default" class="button grey transition-3d-hover my-4 small" uk-toggle="">
+                    <i class="icon-feather-clock mr-2"></i> Notify me</a> -->
+                    <button [routerLink]="['/register']" class="btn btn-success my-4"><i class="icon-feather-clock mr-2"></i>Crear Cuenta</button> <br>
+                    <button data-dismiss="modal" aria-label="Close" class="btn btn-danger my-4"><i class="icon-feather-clock mr-2"></i>Más Tarde </button> <br>
+
+            </div>
+        </div>
+
+
+        </div>
+      </div>
+
+    </div>
+    </section>
+
